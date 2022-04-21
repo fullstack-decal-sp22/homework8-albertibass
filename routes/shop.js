@@ -15,7 +15,7 @@ router.get('/list', auth, async (req, res) => {
       res.send({ message: 'Error in Fetching shopping list' });
     }
   });
-
+ 
 router.post('/add', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
